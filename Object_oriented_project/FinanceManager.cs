@@ -1,6 +1,6 @@
 ﻿namespace Object_oriented_project
 {
-    internal class Program
+    internal class FinanceManager
     {
         static void Main(string[] args)
         {
