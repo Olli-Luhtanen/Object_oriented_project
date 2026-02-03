@@ -9,6 +9,7 @@ namespace Object_oriented_project
     public class TransactionManager
     {
         List<Transaction> transactions = new List<Transaction>();
+
         public void addTransaction(Transaction transaction)
         {
             transactions.Add(transaction);
@@ -23,7 +24,7 @@ namespace Object_oriented_project
 
             foreach (Transaction transaction in transactions)
             {
-                if (transaction.Type == "Expense")
+                if (transaction.Type == TransactionType.Expense)
                 {
                     expenseAmount += transaction.Amount;
                 }
@@ -37,7 +38,7 @@ namespace Object_oriented_project
 
             foreach (Transaction transaction in transactions)
             {
-                if (transaction.Type == "Income")
+                if (transaction.Type == TransactionType.Income)
                 {
                     incomeAmount += transaction.Amount;
                 }

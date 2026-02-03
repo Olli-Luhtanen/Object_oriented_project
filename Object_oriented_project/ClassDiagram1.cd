@@ -10,14 +10,14 @@
   <Class Name="Object_oriented_project.Transaction">
     <Position X="4.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAQABABAAACAAAAAAAABAQBAAAAACAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAQABAAAAACAAAAAAAABAQBAAAAACAA=</HashCode>
       <FileName>Transaction.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Object_oriented_project.TransactionManager">
-    <Position X="6" Y="1" Width="1.5" />
+    <Position X="6.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAQAAAAAAQAAAAAAACACAAAAAAAAAAAAAIAgAA=</HashCode>
+      <HashCode>CAAAAAAQAAAAAAQAAAAAAACACAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>TransactionManager.cs</FileName>
     </TypeIdentifier>
   </Class>
