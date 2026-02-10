@@ -1,12 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Object_oriented_project.FinanceManager" Collapsed="true">
-    <Position X="2.5" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>FinanceManager.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Object_oriented_project.Transaction">
     <Position X="4.25" Y="1" Width="1.5" />
     <TypeIdentifier>
@@ -15,10 +8,24 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Object_oriented_project.TransactionManager">
-    <Position X="6.75" Y="1" Width="1.5" />
+    <Position X="6" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAQAAAAAAQAAAAAAACACAAAAAAAAAAAAAAAgAA=</HashCode>
+      <HashCode>CACAAAAAAAEAEAAAAAAACAJAAAAQAAoAAAACAAAAAAA=</HashCode>
       <FileName>TransactionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Object_oriented_project.StorageManager">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StorageManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Object_oriented_project.Program" Collapsed="true">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

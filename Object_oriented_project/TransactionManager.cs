@@ -8,21 +8,40 @@ namespace Object_oriented_project
 {
     public class TransactionManager
     {
-        List<Transaction> transactions = new List<Transaction>();
+        private List<Transaction> _transactions = new List<Transaction>();
+        public IReadOnlyList<Transaction> Transactions => _transactions.AsReadOnly();
 
-        public void addTransaction(Transaction transaction)
+
+        public void AddTransaction(Transaction transaction)
         {
-            transactions.Add(transaction);
+            if (transaction is null) 
+                throw new ArgumentNullException(nameof(transaction));
+            
+            else
+                _transactions.Add(transaction);
         }
-        public void removeTransaction(Transaction transaction)
+        public void RemoveTransaction(Transaction transaction)
         {
-            transactions.Remove(transaction);
+            _transactions.Remove(transaction);
         }
-        public decimal getTotalExpenses()
+        public decimal GetExpensesByMonth(int year, int month)
+        {
+            decimal expenseAmount = 0;
+            foreach (Transaction transaction in _transactions)
+            {
+                if (transaction.Type == TransactionType.Expense &&
+                    transaction.Date.Year == year && transaction.Date.Month == month)
+                {
+                    expenseAmount += transaction.Amount;
+                }
+            }
+            return expenseAmount;
+        }
+        public decimal GetTotalExpenses()
         {
             decimal expenseAmount = 0;
 
-            foreach (Transaction transaction in transactions)
+            foreach (Transaction transaction in _transactions)
             {
                 if (transaction.Type == TransactionType.Expense)
                 {
@@ -31,12 +50,24 @@ namespace Object_oriented_project
             }
             return expenseAmount;
         }
-
-        public decimal getTotalIncome()
+        public decimal GetIncomeByMonth(int year, int month)
+        {
+            decimal incomeAmount = 0;
+            foreach (Transaction transaction in _transactions)
+            {
+                if (transaction.Type == TransactionType.Income &&
+                    transaction.Date.Year == year && transaction.Date.Month == month)
+                {
+                    incomeAmount += transaction.Amount;
+                }
+            }
+            return incomeAmount;
+        }
+        public decimal GetTotalIncome()
         {
             decimal incomeAmount = 0;
 
-            foreach (Transaction transaction in transactions)
+            foreach (Transaction transaction in _transactions)
             {
                 if (transaction.Type == TransactionType.Income)
                 {
@@ -45,12 +76,28 @@ namespace Object_oriented_project
             }
             return incomeAmount;
         }
+        public decimal GetTotalByCategory(string category)
+        {
+            decimal totalAmount = 0;
+            foreach (Transaction transaction in _transactions)
+            {
+                if (transaction.Category == category)
+                {
+                    totalAmount += transaction.Amount;
+                }
+            }
+            return totalAmount;
+        }
+        public decimal GetBalance()
+        {
+            return GetTotalIncome() - GetTotalExpenses();
+        }
 
         public List<Transaction> TransactionsByMonth(int year, int month)
         {
             List<Transaction> monthlyTransactions = new List<Transaction>();
             
-            foreach (Transaction transaction in transactions)
+            foreach (Transaction transaction in _transactions)
             {
                 if (transaction.Date.Year == year && transaction.Date.Month == month)
                 {

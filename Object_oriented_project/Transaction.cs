@@ -20,6 +20,14 @@ namespace Object_oriented_project
         private DateTime _date = DateTime.Now;
         private TransactionType _type = TransactionType.Unknown;
 
+        public Transaction(decimal amount, string category, TransactionType type, DateTime date)
+        {
+            Amount = amount;
+            Category = category;
+            Type = type;
+            Date = date;
+        }
+
         public decimal Amount
         {
             get {return _amount;}
