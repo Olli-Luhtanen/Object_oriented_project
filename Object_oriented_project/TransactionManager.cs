@@ -11,7 +11,6 @@ namespace Object_oriented_project
         private List<Transaction> _transactions = new List<Transaction>();
         public IReadOnlyList<Transaction> Transactions => _transactions.AsReadOnly();
 
-
         public void AddTransaction(Transaction transaction)
         {
             if (transaction is null) 
@@ -20,9 +19,12 @@ namespace Object_oriented_project
             else
                 _transactions.Add(transaction);
         }
-        public void RemoveTransaction(Transaction transaction)
+        public bool RemoveTransaction(Guid id)
         {
-            _transactions.Remove(transaction);
+            var t = _transactions.FirstOrDefault(x => x.Id == id);
+            if (t is null) return false;
+            _transactions.Remove(t);
+            return true;
         }
         public decimal GetExpensesByMonth(int year, int month)
         {

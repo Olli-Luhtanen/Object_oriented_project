@@ -19,6 +19,7 @@ namespace Object_oriented_project
         private string _category = "Other";
         private DateTime _date = DateTime.Now;
         private TransactionType _type = TransactionType.Unknown;
+        public Guid Id { get; init; } = Guid.NewGuid();
 
         public Transaction(decimal amount, string category, TransactionType type, DateTime date)
         {
