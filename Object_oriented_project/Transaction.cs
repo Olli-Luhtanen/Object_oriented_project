@@ -5,31 +5,20 @@ using System.Text;
 
 namespace Object_oriented_project
 {
-    public enum TransactionType
-    {
-        Unknown = 0,
-        Income,
-        Expense,
-        Transfer
-    }
-
-    public class Transaction
+    public abstract class Transaction
     {
         private decimal _amount = 0;
         private string _category = "Other";
         private DateTime _date = DateTime.Now;
-        private TransactionType _type = TransactionType.Unknown;
         public Guid Id { get; init; } = Guid.NewGuid();
 
-        public Transaction() { }
-        public Transaction(decimal amount, string category, TransactionType type, DateTime date)
+        protected Transaction() { }
+        protected Transaction(decimal amount, string category, DateTime date)
         {
             Amount = amount;
             Category = category;
-            Type = type;
             Date = date;
         }
-
         public decimal Amount
         {
             get {return _amount;}
@@ -45,7 +34,6 @@ namespace Object_oriented_project
                 }
             }
         }
-
         public string Category
         {
             get { return _category; }
@@ -61,13 +49,6 @@ namespace Object_oriented_project
                 }
             }
         }
-
-        public TransactionType Type
-        {
-            get { return _type; }
-            set { _type = value; }
-        }
-
         public DateTime Date
         {
             get { return _date; }

@@ -31,7 +31,7 @@ namespace Object_oriented_project
             decimal expenseAmount = 0;
             foreach (Transaction transaction in _transactions)
             {
-                if (transaction.Type == TransactionType.Expense &&
+                if (transaction is ExpenseTransaction &&
                     transaction.Date.Year == year && transaction.Date.Month == month)
                 {
                     expenseAmount += transaction.Amount;
@@ -45,7 +45,7 @@ namespace Object_oriented_project
 
             foreach (Transaction transaction in _transactions)
             {
-                if (transaction.Type == TransactionType.Expense)
+                if (transaction is ExpenseTransaction)
                 {
                     expenseAmount += transaction.Amount;
                 }
@@ -57,7 +57,7 @@ namespace Object_oriented_project
             decimal incomeAmount = 0;
             foreach (Transaction transaction in _transactions)
             {
-                if (transaction.Type == TransactionType.Income &&
+                if (transaction is IncomeTransaction &&
                     transaction.Date.Year == year && transaction.Date.Month == month)
                 {
                     incomeAmount += transaction.Amount;
@@ -71,7 +71,7 @@ namespace Object_oriented_project
 
             foreach (Transaction transaction in _transactions)
             {
-                if (transaction.Type == TransactionType.Income)
+                if (transaction is IncomeTransaction)
                 {
                     incomeAmount += transaction.Amount;
                 }

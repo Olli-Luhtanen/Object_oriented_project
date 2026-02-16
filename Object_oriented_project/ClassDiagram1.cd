@@ -1,31 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Object_oriented_project.Transaction">
-    <Position X="4.25" Y="1" Width="1.5" />
+    <Position X="5.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAABAQABAAAAACAAAAAAAABAQBAAAAACAA=</HashCode>
+      <HashCode>AAACAAAAAAAABAAABAAAAACAAAAAAAABAABAAAAACAA=</HashCode>
       <FileName>Transaction.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Object_oriented_project.TransactionManager">
-    <Position X="7.75" Y="1" Width="1.5" />
+    <Position X="5.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CACAAAAAACAAEAAAAAAACAJAAAAQAAoAAAACAAAAAAA=</HashCode>
       <FileName>TransactionManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Object_oriented_project.StorageManager">
-    <Position X="2.5" Y="1" Width="1.5" />
+    <Position X="14.5" Y="1" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Object_oriented_project.StorageManager.TransactionDto" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>StorageManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAABAAAAAAAA=</HashCode>
       <FileName>StorageManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Object_oriented_project.Program" Collapsed="true">
-    <Position X="0.5" Y="1" Width="1.5" />
+    <Position X="10.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Object_oriented_project.IncomeTransaction">
+    <Position X="3" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IncomeTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Object_oriented_project.ExpenseTransaction">
+    <Position X="5.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExpenseTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Object_oriented_project.TransferTransaction">
+    <Position X="8" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TransferTransaction.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -17,7 +17,8 @@
             Console.WriteLine("All transactions (Id | Date | Type | Category | Amount):");
             foreach (var tx in manager.Transactions)
             {
-                Console.WriteLine($"{tx.Id} | {tx.Date:yyyy-MM-dd} | {tx.Type} | {tx.Category} | {tx.Amount:C}");
+                var typeName = tx.GetType().Name;
+                Console.WriteLine($"{tx.Id} | {tx.Date:yyyy-MM-dd} | {typeName} | {tx.Category} | {tx.Amount:C}");
             }
 
             Console.WriteLine();
