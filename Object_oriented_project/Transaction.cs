@@ -21,6 +21,7 @@ namespace Object_oriented_project
         private TransactionType _type = TransactionType.Unknown;
         public Guid Id { get; init; } = Guid.NewGuid();
 
+        public Transaction() { }
         public Transaction(decimal amount, string category, TransactionType type, DateTime date)
         {
             Amount = amount;

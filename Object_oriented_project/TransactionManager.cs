@@ -78,12 +78,13 @@ namespace Object_oriented_project
             }
             return incomeAmount;
         }
-        public decimal GetTotalByCategory(string category)
+        public decimal GetTotalByCategoryAndMonth(string category,int year, int month)
         {
             decimal totalAmount = 0;
             foreach (Transaction transaction in _transactions)
             {
-                if (transaction.Category == category)
+                if (transaction.Category == category && 
+                    transaction.Date.Year == year && transaction.Date.Month == month)
                 {
                     totalAmount += transaction.Amount;
                 }
