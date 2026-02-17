@@ -35,6 +35,22 @@
                     Console.WriteLine("No transaction found with that Id.");
                 }
             }
+            IncomeTransaction salary = new IncomeTransaction 
+            {
+                Id = Guid.NewGuid(),
+                Amount = 5000m,
+                Category = "Salary",
+                Date = DateTime.Now,
+            };
+            ExpenseTransaction rent = new ExpenseTransaction
+            {
+                Id = Guid.NewGuid(),
+                Amount = 1500m,
+                Category = "Rent",
+                Date = DateTime.Now,
+            };
+            manager.AddTransaction(rent);
+            manager.AddTransaction(salary);
 
             StorageManager.SaveJson(manager.Transactions);
         }
