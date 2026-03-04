@@ -1,35 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Object_oriented_project.Transaction">
-    <Position X="5.5" Y="1" Width="1.5" />
+    <Position X="5.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAABAAABAAAAACAAAAAAAABAABAAAAACAA=</HashCode>
       <FileName>Transaction.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Object_oriented_project.TransactionManager">
-    <Position X="5.5" Y="7.75" Width="1.5" />
+    <Position X="4.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CACAAAAAACAAEAAAAAAACAJAAAAQAAoAAAACAAAAAAA=</HashCode>
       <FileName>TransactionManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Object_oriented_project.StorageManager">
-    <Position X="14.5" Y="1" Width="1.5" />
-    <NestedTypes>
-      <Class Name="Object_oriented_project.StorageManager.TransactionDto" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>StorageManager.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAABAAAAAAAA=</HashCode>
-      <FileName>StorageManager.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Object_oriented_project.Program" Collapsed="true">
-    <Position X="10.25" Y="1.25" Width="1.5" />
+    <Position X="5.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -56,5 +42,27 @@
       <FileName>TransferTransaction.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Object_oriented_project.JsonStorageManager">
+    <Position X="6.75" Y="8.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Object_oriented_project.JsonStorageManager.TransactionDto" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>JsonStorageManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JsonStorageManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.26" />
+  </Class>
+  <Interface Name="Object_oriented_project.IStorageManager" Collapsed="true">
+    <Position X="6.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IStorageManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

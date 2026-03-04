@@ -12,8 +12,8 @@ namespace Object_oriented_project
         private DateTime _date = DateTime.Now;
         public Guid Id { get; init; } = Guid.NewGuid();
 
-        protected Transaction() { }
-        protected Transaction(decimal amount, string category, DateTime date)
+        public Transaction() { }
+        public Transaction(decimal amount, string category, DateTime date)
         {
             Amount = amount;
             Category = category;
