@@ -58,7 +58,7 @@
     <Lollipop Position="0.26" />
   </Class>
   <Interface Name="Object_oriented_project.IStorageManager" Collapsed="true">
-    <Position X="6.75" Y="7.5" Width="1.5" />
+    <Position X="8.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IStorageManager.cs</FileName>
