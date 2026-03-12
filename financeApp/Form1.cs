@@ -6,5 +6,10 @@ namespace financeApp
         {
             InitializeComponent();
         }
+
+        private void listViewTransactions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
