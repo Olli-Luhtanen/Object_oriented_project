@@ -1,4 +1,4 @@
-namespace Object_oriented_project
+namespace financeApp
 {
     public enum TransactionKind
     {

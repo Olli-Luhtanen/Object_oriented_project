@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Object_oriented_project
+namespace financeApp
 {
     public class IncomeTransaction : Transaction
     {

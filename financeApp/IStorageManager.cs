@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Object_oriented_project
+namespace financeApp
 {
     // Storage manager interface to allow multiple storage implementations (JSON, XML, etc.)
     public interface IStorageManager

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 
-namespace Object_oriented_project
+namespace financeApp
 {
     public class TransactionManager
     {
