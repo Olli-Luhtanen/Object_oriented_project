@@ -30,9 +30,7 @@
         {
             panelLeft = new Panel();
             btnStatistics = new Button();
-            btnAccounts = new Button();
             btnHome = new Button();
-            btnSettings = new Button();
             panelMain = new Panel();
             listViewTransactions = new ListView();
             columnHeaderDate = new ColumnHeader();
@@ -51,60 +49,48 @@
             // 
             // panelLeft
             // 
-            panelLeft.BackColor = SystemColors.ControlLight;
+            panelLeft.BackColor = Color.SteelBlue;
             panelLeft.Controls.Add(btnStatistics);
-            panelLeft.Controls.Add(btnAccounts);
             panelLeft.Controls.Add(btnHome);
-            panelLeft.Controls.Add(btnSettings);
             panelLeft.Dock = DockStyle.Left;
             panelLeft.Location = new Point(0, 0);
             panelLeft.Name = "panelLeft";
-            panelLeft.Size = new Size(180, 600);
+            panelLeft.Padding = new Padding(0, 40, 0, 0);
+            panelLeft.Size = new Size(101, 600);
             panelLeft.TabIndex = 1;
             // 
             // btnStatistics
             // 
+            btnStatistics.AllowDrop = true;
+            btnStatistics.BackColor = Color.SteelBlue;
             btnStatistics.Dock = DockStyle.Top;
+            btnStatistics.FlatAppearance.BorderSize = 0;
             btnStatistics.FlatStyle = FlatStyle.Flat;
             btnStatistics.Font = new Font("Segoe UI Emoji", 20F);
-            btnStatistics.Location = new Point(0, 112);
+            btnStatistics.ForeColor = Color.Black;
+            btnStatistics.Location = new Point(0, 96);
             btnStatistics.Name = "btnStatistics";
-            btnStatistics.Size = new Size(180, 56);
+            btnStatistics.Size = new Size(101, 56);
             btnStatistics.TabIndex = 0;
             btnStatistics.Text = "📊";
-            // 
-            // btnAccounts
-            // 
-            btnAccounts.Dock = DockStyle.Top;
-            btnAccounts.FlatStyle = FlatStyle.Flat;
-            btnAccounts.Font = new Font("Segoe UI Emoji", 20F);
-            btnAccounts.Location = new Point(0, 56);
-            btnAccounts.Name = "btnAccounts";
-            btnAccounts.Size = new Size(180, 56);
-            btnAccounts.TabIndex = 1;
-            btnAccounts.Text = "\U0001f9fe";
+            btnStatistics.UseVisualStyleBackColor = false;
+            btnStatistics.Click += btnStatistics_Click;
             // 
             // btnHome
             // 
+            btnHome.BackColor = Color.SteelBlue;
             btnHome.Dock = DockStyle.Top;
+            btnHome.FlatAppearance.BorderSize = 0;
             btnHome.FlatStyle = FlatStyle.Flat;
             btnHome.Font = new Font("Segoe UI Emoji", 20F);
-            btnHome.Location = new Point(0, 0);
+            btnHome.ForeColor = Color.Black;
+            btnHome.Location = new Point(0, 40);
             btnHome.Name = "btnHome";
-            btnHome.Size = new Size(180, 56);
+            btnHome.Size = new Size(101, 56);
             btnHome.TabIndex = 2;
             btnHome.Text = "🏠";
-            // 
-            // btnSettings
-            // 
-            btnSettings.Dock = DockStyle.Bottom;
-            btnSettings.FlatStyle = FlatStyle.Flat;
-            btnSettings.Font = new Font("Segoe UI Emoji", 20F);
-            btnSettings.Location = new Point(0, 544);
-            btnSettings.Name = "btnSettings";
-            btnSettings.Size = new Size(180, 56);
-            btnSettings.TabIndex = 3;
-            btnSettings.Text = "⚙";
+            btnHome.UseVisualStyleBackColor = false;
+            btnHome.Click += btnHome_Click;
             // 
             // panelMain
             // 
@@ -113,10 +99,10 @@
             panelMain.Controls.Add(panelBalance);
             panelMain.Controls.Add(lblHeader);
             panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(180, 0);
+            panelMain.Location = new Point(101, 0);
             panelMain.Name = "panelMain";
             panelMain.Padding = new Padding(16);
-            panelMain.Size = new Size(720, 600);
+            panelMain.Size = new Size(799, 600);
             panelMain.TabIndex = 0;
             // 
             // listViewTransactions
@@ -127,7 +113,7 @@
             listViewTransactions.GridLines = true;
             listViewTransactions.Location = new Point(16, 96);
             listViewTransactions.Name = "listViewTransactions";
-            listViewTransactions.Size = new Size(688, 488);
+            listViewTransactions.Size = new Size(767, 488);
             listViewTransactions.TabIndex = 0;
             listViewTransactions.UseCompatibleStateImageBehavior = false;
             listViewTransactions.View = View.Details;
@@ -162,7 +148,7 @@
             panelBalance.Location = new Point(16, 16);
             panelBalance.Name = "panelBalance";
             panelBalance.Padding = new Padding(0, 8, 0, 8);
-            panelBalance.Size = new Size(688, 80);
+            panelBalance.Size = new Size(767, 80);
             panelBalance.TabIndex = 1;
             // 
             // btnAddTransaction
@@ -170,12 +156,13 @@
             btnAddTransaction.Dock = DockStyle.Right;
             btnAddTransaction.FlatStyle = FlatStyle.Flat;
             btnAddTransaction.Font = new Font("Segoe UI Symbol", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddTransaction.Location = new Point(632, 8);
+            btnAddTransaction.Location = new Point(711, 8);
             btnAddTransaction.Name = "btnAddTransaction";
             btnAddTransaction.Size = new Size(56, 64);
             btnAddTransaction.TabIndex = 2;
             btnAddTransaction.Text = "+";
             btnAddTransaction.UseVisualStyleBackColor = true;
+            btnAddTransaction.Click += btnAddTransaction_Click;
             // 
             // lblBalanceAmount
             // 
@@ -228,9 +215,7 @@
 
         private Panel panelLeft;
         private Button btnHome;
-        private Button btnAccounts;
         private Button btnStatistics;
-        private Button btnSettings;
         private Panel panelMain;
         private Label lblHeader;
         private Panel panelBalance;

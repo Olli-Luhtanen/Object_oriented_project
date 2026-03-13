@@ -11,5 +11,20 @@ namespace financeApp
         {
 
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddTransaction_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
